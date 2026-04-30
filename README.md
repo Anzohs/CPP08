@@ -35,6 +35,7 @@ Write a **function template** called `easyfind` that accepts a container type `T
 
 ```cpp
 template <typename T>
+T easyfind(T container, int i);
 // find the first occurrence of n in container
 ```
 
