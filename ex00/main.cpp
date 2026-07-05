@@ -58,8 +58,8 @@ int main() {
         std::cout << "Found in vector: " << *notFoundIt << std::endl;
     } catch (const std::exception& e) {
         // Catch and handle the exception
+        std::cerr << RED << "This error was catch: " << std::endl;
         std::cerr << e.what() << std::endl;
-        std::cerr << e.what() << "This error was catch" << std::endl;
     }
 
     return 0;

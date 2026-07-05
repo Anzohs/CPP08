@@ -14,6 +14,8 @@
 
 #include <iostream>
 #include <stdexcept>
+#define RED "\033[31m"
+#define RESET "\033[0m"
 
 template<typename T>
 typename T::iterator easyfind(T& container, int i);

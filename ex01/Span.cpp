@@ -38,7 +38,7 @@ void Span::addNumber(int n)
 int Span::longestSpan() const
 {
 	if (this->box.size() < 2)
-		throw std::logic_error("It’s a misuse of the class API (precondition not met), less than 2 numbers");
+		throw std::logic_error("It’s a misuse of the class (precondition not met), less than 2 numbers");
 	return *std::max_element(this->box.begin(), this->box.end()) - *std::min_element(this->box.begin(), this->box.end());
 };
 
@@ -48,7 +48,7 @@ int Span::shortestSpan() const
 	std::vector<int> tmp;
 
 	if (this->box.size() < 2)
-		throw std::logic_error("It’s a misuse of the class API (precondition not met), less than 2 numbers");
+		throw std::logic_error("It’s a misuse of the class (precondition not met), less than 2 numbers");
 
 	tmp = this->box;
 	std::sort(tmp.begin(), tmp.end());

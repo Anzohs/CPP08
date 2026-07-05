@@ -29,4 +29,13 @@ class Span{
 	void addNumber(int n);
 	int shortestSpan() const;
 	int longestSpan() const;
+
+	template <typename Iterator>
+    void addNumbers(Iterator first, Iterator last)
+    {
+        if (box.size() + static_cast<unsigned int>(std::distance(first, last)) > _size)
+            throw std::runtime_error("You’re trying to go past the allowed capacity");
+
+        box.insert(box.end(), first, last);
+    }
 };
